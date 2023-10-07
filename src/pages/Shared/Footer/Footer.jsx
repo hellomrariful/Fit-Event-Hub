@@ -3,16 +3,16 @@ import logo from '../../../assets/logo.webp'
 
 const Footer = () => {
     return (
-        <div>
+        <div className=' max-h-screen'>
            <footer className="bg-white dark:bg-gray-900">
     <div className="container px-6 py-8 mx-auto">
         <div className="flex flex-col items-center text-center">
-            <Link to='/'>
-            <div className='flex items-center gap-3'>
-            <img className="w-auto h-7" src={logo} alt=""/>
-            <h1>Fitness Hub</h1>
-            </div>
-            </Link>
+        <Link className="flex items-center">
+          <img src={logo} className="h-12 mr-3" alt="" />
+          <span className="self-center text-3xl font-bold whitespace-nowrap dark:text-white">
+            Fitness Hub
+          </span>
+        </Link>
 
             <div className="flex flex-wrap justify-center mt-6 -mx-4">
                 <a href="#" className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400" aria-label="Reddit"> Home </a>

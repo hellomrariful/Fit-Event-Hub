@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
 
 const Faq = ({ faqItems }) => {
   const [activeItem, setActiveItem] = useState(null);
@@ -17,11 +18,12 @@ const Faq = ({ faqItems }) => {
               onClick={() => toggleItem(index)}
             >
               <span>{faqItem.question}</span>
-              <i
-                className={`fa fa-chevron-down absolute right-0 pt-1 text-base transition-transform ${
+
+              <i className={` absolute right-0 pt-1 text-base transition-transform ${
                   activeItem === index ? "rotate-180" : ""
-                }`}
-              ></i>
+                }`}>
+              <FaChevronDown></FaChevronDown>
+              </i>
             </button>
           </h6>
           <div

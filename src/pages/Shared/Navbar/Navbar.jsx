@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import "./Navbar.css";
+import logo from "../../../assets/logo.webp";
 
 const Navbar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -19,19 +21,25 @@ const Navbar = () => {
     setDropdownOpen(false);
   };
 
+  const NavLinks = (
+    <>
+      <nav className="flex   gap-3  md:gap-4 lg:gap-10 ">
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/register">Register</NavLink>
+      </nav>
+    </>
+  );
+
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
       <div className=" flex flex-wrap items-center justify-between mx-auto mt-8 mb-10">
-        <a href="https://flowbite.com/" className="flex items-center">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8 mr-3"
-            alt="Flowbite Logo"
-          />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
+        <Link className="flex items-center">
+          <img src={logo} className="h-12 mr-3" alt="" />
+          <span className="self-center text-3xl font-bold whitespace-nowrap dark:text-white">
+            Fitness Hub
           </span>
-        </a>
+        </Link>
         <div className="flex items-center md:order-2">
           <div className="relative">
             <button
@@ -174,13 +182,15 @@ const Navbar = () => {
           id="navbar-user"
         >
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li
+            {/* <li
               className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
               aria-current="page"
             >
               <NavLink>Home</NavLink>
-            </li>
-            <li>
+            </li> */}
+            {NavLinks}
+
+            {/* <li>
               <a
                 href="#"
                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
@@ -211,7 +221,7 @@ const Navbar = () => {
               >
                 Contact
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "category": "Health Fairs",
     "name": "Annual Health Expo",
     "image": "https://i.ibb.co/swLrC3J/img-01.png",
@@ -12,7 +12,7 @@
     "level": "All Levels"
   },
   {
-    "id": 2,
+    "id": "2",
     "category": "Yoga and Fitness",
     "name": "Zen Yoga Retreat",
     "image": "https://i.ibb.co/XLnVjW0/img-02.png",
@@ -24,7 +24,7 @@
     "level": "Intermediate"
   },
   {
-    "id": 3,
+    "id": "3",
     "category": "Mental Health Workshops",
     "name": "Mindfulness for Stress Relief",
     "image": "https://i.ibb.co/HDFNF4R/img-03.png",
@@ -36,7 +36,7 @@
     "level": "Beginner"
   },
   {
-    "id": 4,
+    "id": "4",
     "category": "Fitness Challenges",
     "name": "Summer Fitness Challenge",
     "image": "https://i.ibb.co/jZfCm7F/img-04.png",
@@ -48,7 +48,7 @@
     "level": "All Levels"
   },
   {
-    "id": 5,
+    "id": "5",
     "category": "Healthy Lifestyle Retreats",
     "name": "Holistic Wellness Retreat",
     "image": "https://i.ibb.co/Yfbk6g2/img-05.png",
@@ -60,7 +60,7 @@
     "level": "Intermediate"
   },
   {
-    "id": 6,
+    "id": "6",
     "category": "Health and Fitness Events",
     "name": "Community Health Fair",
     "image": "https://i.ibb.co/VTswGmg/img-06.jpg",
