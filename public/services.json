@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "category": "Health Fairs",
+    "name": "Annual Health Expo",
+    "image": "https://i.ibb.co/swLrC3J/img-01.png",
+    "price": "$10",
+    "description": "Join us for our annual Health Expo featuring health screenings, wellness workshops, and healthy living tips.",
+    "title": "Annual Health Expo",
+    "schedule": "June 15, 2023",
+    "duration": "1 day",
+    "level": "All Levels"
+  },
+  {
+    "id": 2,
+    "category": "Yoga and Fitness",
+    "name": "Zen Yoga Retreat",
+    "image": "https://i.ibb.co/XLnVjW0/img-02.png",
+    "price": "$300",
+    "description": "Escape to tranquility on this Zen Yoga Retreat. Reconnect with your inner self through yoga and meditation.",
+    "title": "Zen Yoga Retreat",
+    "schedule": "September 5-7, 2023",
+    "duration": "3 days",
+    "level": "Intermediate"
+  },
+  {
+    "id": 3,
+    "category": "Mental Health Workshops",
+    "name": "Mindfulness for Stress Relief",
+    "image": "https://i.ibb.co/HDFNF4R/img-03.png",
+    "price": "$50",
+    "description": "Learn mindfulness techniques to reduce stress and improve your mental well-being in this workshop.",
+    "title": "Mindfulness for Stress Relief",
+    "schedule": "Monthly sessions available",
+    "duration": "2 hours per session",
+    "level": "Beginner"
+  },
+  {
+    "id": 4,
+    "category": "Fitness Challenges",
+    "name": "Summer Fitness Challenge",
+    "image": "https://i.ibb.co/jZfCm7F/img-04.png",
+    "price": "Free",
+    "description": "Join our Summer Fitness Challenge to achieve your fitness goals and stay active all season.",
+    "title": "Summer Fitness Challenge",
+    "schedule": "June 1 - August 31, 2023",
+    "duration": "3 months",
+    "level": "All Levels"
+  },
+  {
+    "id": 5,
+    "category": "Healthy Lifestyle Retreats",
+    "name": "Holistic Wellness Retreat",
+    "image": "https://i.ibb.co/Yfbk6g2/img-05.png",
+    "price": "$500",
+    "description": "Experience a holistic approach to wellness with yoga, nutrition, and mindfulness at our retreat.",
+    "title": "Holistic Wellness Retreat",
+    "schedule": "October 10-15, 2023",
+    "duration": "6 days",
+    "level": "Intermediate"
+  },
+  {
+    "id": 6,
+    "category": "Health and Fitness Events",
+    "name": "Community Health Fair",
+    "image": "https://i.ibb.co/VTswGmg/img-06.jpg",
+    "price": "Free",
+    "description": "Join our Community Health Fair for free health screenings, fitness activities, and wellness resources.",
+    "title": "Community Health Fair",
+    "schedule": "August 20, 2023",
+    "duration": "1 day",
+    "level": "All Levels"
+  }
+]
