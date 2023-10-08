@@ -1,9 +1,21 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../../assets/logo.webp";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Navbar = () => {
+
+  const {user, logOut} = useContext(AuthContext)
+  console.log(user);
+
+  const handelSignOut = () =>{
+    logOut()
+    .then()
+    .catch()
+
+  }
+
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -31,6 +43,25 @@ const Navbar = () => {
     </>
   );
 
+  const ProfileNav = <>
+
+      <li className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"><NavLink to='/'>Dashboard</NavLink></li>
+
+      <li className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"><NavLink to='/balance'>Balance</NavLink></li>
+
+
+     {
+      user ?
+      <li className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"><Link to='/'><button onClick={handelSignOut} >Sign Out</button></Link></li>
+      :
+      <li className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"><NavLink to='/login'>Login</NavLink></li>
+     }
+
+
+      {/* <li className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"><NavLink to='/login'>Login</NavLink></li> */}
+  
+  </>
+
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
       <div className=" flex flex-wrap items-center justify-between mx-auto mt-8 mb-10">
@@ -50,13 +81,26 @@ const Navbar = () => {
               onClick={toggleDropdown}
             >
               <span className="sr-only">Open user menu</span>
-              <img
+
+            {
+              user ? <img
+              className="w-8 h-8 rounded-full"
+              src={user.photoURL}
+              alt="user photo"
+            /> 
+            :
+            <img
                 className="w-8 h-8 rounded-full"
-                src="/docs/images/people/profile-picture-3.jpg"
+                src={logo}
                 alt="user photo"
               />
+            }
             </button>
+
+
             {/* Dropdown menu */}
+
+
             <div
               className={`z-50 ${
                 isDropdownOpen ? "block" : "hidden"
@@ -65,46 +109,28 @@ const Navbar = () => {
             >
               <div className="px-4 py-3">
                 <span className="block text-sm text-gray-900 dark:text-white">
-                  Bonnie Green
+                  {
+                    user ? <p>Welcome, {user.displayName}</p>
+                    :
+                    <p>Your Name</p>
+                  }
                 </span>
                 <span className="block text-sm text-gray-500 truncate dark:text-gray-400">
-                  name@flowbite.com
+                 {
+                  user ? <p>{user.email}</p>
+                  :
+                  <p>Your Email here</p>
+                 }
                 </span>
               </div>
+              
+
               <ul className="py-2" aria-labelledby="user-menu-button">
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    Dashboard
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    Settings
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    Earnings
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    Sign out
-                  </a>
-                </li>
+                {ProfileNav}
               </ul>
+
+
+              
             </div>
           </div>
           <button

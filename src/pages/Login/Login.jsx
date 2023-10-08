@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../../src/assets/logo.webp";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -8,6 +8,8 @@ import toast, { Toaster } from "react-hot-toast";
 const Login = () => {
   const [show, setShow] = useState(false);
   const [loggedError, setLoggedError] = useState("");
+  const location = useLocation()
+  const navigate = useNavigate()
 
   const { signInUser, signUpWithGoogle } = useContext(AuthContext);
 
@@ -40,6 +42,9 @@ const Login = () => {
           });
         };
         displayErrorToast();
+
+        // navigate
+        navigate(location?.state ? location.state : '/')
       })
       .catch((err) => {
         console.error(err);
@@ -52,6 +57,8 @@ const Login = () => {
     signUpWithGoogle()
       .then((result) => {
         console.log(result);
+        // navigate
+        navigate(location?.state ? location.state : '/')
       })
       .catch((error) => {
         console.error(error.message);
@@ -150,7 +157,7 @@ const Login = () => {
             type="submit"
             data-ripple-light="true"
           >
-            Register
+           Login
           </button>
           <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
             Already have an account?

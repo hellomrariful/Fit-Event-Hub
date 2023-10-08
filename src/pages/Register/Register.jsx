@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../../src/assets/logo.webp";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -9,6 +9,7 @@ const Register = () => {
   const { createUser, signUpWithGoogle } = useContext(AuthContext);
   const [registerError, setRegisterError] = useState("");
   const [show, setShow] = useState(false);
+  const navigate = useNavigate()
 
   const handelRegister = (e) => {
     e.preventDefault();
@@ -59,6 +60,8 @@ const Register = () => {
               secondary: "#FFFFFF",
             },
           });
+          // navigate
+        navigate(location?.state ? location.state : '/')
         };
         displayErrorToast();
 
@@ -91,6 +94,8 @@ const Register = () => {
     signUpWithGoogle()
       .then((result) => {
         console.log(result);
+        // navigate
+        navigate(location?.state ? location.state : '/')
       })
       .catch((error) => {
         console.error(error.message);

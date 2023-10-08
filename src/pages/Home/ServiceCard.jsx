@@ -16,9 +16,15 @@ const ServiceCard = ({ service }) => {
               >
                 {name}
               </a>
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                {description}
-              </p>
+              <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                {
+                  description.length > 200? <p>{description.slice(0, 200)}<Link to={`/service/${id}`}> Read More</Link></p> 
+                  
+                  :
+                  <p>{description}</p>
+                }
+                
+              </div>
             </div>
           </div>
         </div>
