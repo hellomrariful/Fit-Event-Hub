@@ -34,7 +34,6 @@ const Navbar = () => {
     <>
       <nav className="flex gap-3 md:gap-4 lg:gap-10 lg:text-xl text-[18px]">
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
         <NavLink to="/gallery">Gallery</NavLink>
         <NavLink to="/profile">Profile</NavLink>
         {user ? null : <NavLink to="/register">Register</NavLink>}
@@ -69,7 +68,6 @@ const Navbar = () => {
                 />
               </button>
             ) : (
-              // Render the login button outside of the dropdown when the user is not logged in
               <Link to="/login">
                 <button className="md:px-6 rounded bg-[#A1F65E] md:py-3 text-xl px-3 py-2 mr-1">
                   Login
@@ -77,14 +75,13 @@ const Navbar = () => {
               </Link>
             )}
 
-            {/* Dropdown menu */}
             <div
               className={`z-50 ${
                 isDropdownOpen ? "block" : "hidden"
               } absolute right-0 mt-2 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow`}
               id="user-dropdown"
             >
-              <div className="px-4 py-3">
+              <div className="px-12 py-4">
                 <span className="block text-gray-900 text-center">
                   {user ? <p>Welcome, {user.displayName}</p> : null}
                 </span>
@@ -152,9 +149,6 @@ const Navbar = () => {
             <ul className="flex flex-col p-4 space-y-4 text-center">
               <li className="block text-gray-900  hover:text-blue-700">
                 <NavLink to="/">Home</NavLink>
-              </li>
-              <li className="block text-gray-900  hover:text-blue-700">
-                <NavLink to="/about">About</NavLink>
               </li>
               <li className="block text-gray-900  hover:text-blue-700">
                 <NavLink to="/gallery">Gallery</NavLink>

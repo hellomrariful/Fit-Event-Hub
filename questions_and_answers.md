@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: - B: `ReferenceError: greetign is not defined`
 
-<i>Write your explanation here</i>
+<i>In this code, declare a variable named `greetign`, then when you attempt to assign an empty object then you write wrong variable name `greetign`. That's why JavaScript give ReferenceError</i>
 
 </p>
 </details>
@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: - C: `"12"`
 
-<i>Write your explanation here</i>
+<i>In JavaScript, when you use plus operator `+` with a string then it performs concatenation. You Provide 2 as a string, that's why the result is `12`.</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: - A: `['🍕', '🍫', '🥑', '🍔']`
 
-<i>Write your explanation here</i>
+<i>In here, `info.favoriteFood` reassigned "🍝", but it's never effect original array. That's why result is the original array</i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: - B: `Hi there, undefined`
 
-<i>Write your explanation here</i>
+<i>In this code, the `sayHi` function except a parameter `name`. but when call the function without parameter and also without default parameter then the function return undefined. then `Hi there` and undefined add. So result is `Hi there, undefined`</i>
 
 </p>
 </details>
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: - C: 3
 
-<i>Write your explanation here</i>
+<i>This code run forEach loop. Each element in `nums` array coming and when num is 0, then it does not increment the count. All other values increment `count`. So when finises loop then `count` becomes 3.</i>
 
 </p>
 </details>
