@@ -26,8 +26,7 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         console.log(result.user);
-   
-        
+        e.target.reset()
         const displayErrorToast = () => {
           toast.dismiss("error-toast");
           toast.success("Logged Successfully", {
@@ -49,7 +48,7 @@ const Login = () => {
           navigate(location?.state ? location.state : "/");
         }, 2000)
         
-
+    
         
       })
       .catch((err) => {

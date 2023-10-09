@@ -21,11 +21,6 @@ const Register = () => {
     const email = form.get("email");
     const password = form.get("password");
     const accepted = form.get("terms");
-    // console.log('phone photo', photo.name);
-    const profile = photo.name
-    console.log(profile);
-    console.log( "phone",  photo);
-
 
     // reset error
     setRegisterError("");
@@ -47,6 +42,7 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+        e.target.reset()
         const displayErrorToast = () => {
           toast.dismiss("error-toast");
           toast.success("User Create Successfully", {
@@ -67,7 +63,7 @@ const Register = () => {
           // update profile
           updateProfile(result.user, {
             displayName: name,
-            photoURL: profile
+            photoURL: photo
           })
             .then(() => console.log("profile update"))
             .catch();

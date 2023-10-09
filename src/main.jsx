@@ -11,6 +11,8 @@ import Error from "./pages/Error/Error";
 import AuthProvider from "./Providers/AuthProvider";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import About from "./pages/About/About";
+import Gallery from "./pages/Gallery/Gallery";
+import Profile from "./pages/Profile/Profile";
 
 const router = createBrowserRouter([
   {
@@ -42,7 +44,23 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About></About>
+        element: <About></About>,
+      },
+      {
+        path: "/gallery",
+        element: (
+          <PrivateRoute>
+            <Gallery></Gallery>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
       }
     ],
   },

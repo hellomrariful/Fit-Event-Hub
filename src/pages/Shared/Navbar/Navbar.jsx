@@ -35,10 +35,9 @@ const Navbar = () => {
       <nav className="flex gap-3 md:gap-4 lg:gap-10 lg:text-xl text-[18px]">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>
-        <NavLink to="/products">Products</NavLink>
+        <NavLink to="/gallery">Gallery</NavLink>
         <NavLink to="/profile">Profile</NavLink>
-        {/* {user ? null : <NavLink to="/register">Register</NavLink>} */}
-        <NavLink to="/register">Register</NavLink>
+        {user ? null : <NavLink to="/register">Register</NavLink>}
       </nav>
     </>
   );
@@ -158,11 +157,16 @@ const Navbar = () => {
                 <NavLink to="/about">About</NavLink>
               </li>
               <li className="block text-gray-900 dark:text-white hover:text-blue-700">
-                <NavLink to="/products">Products</NavLink>
+                <NavLink to="/gallery">Gallery</NavLink>
               </li>
               <li className="block text-gray-900 dark:text-white hover:text-blue-700">
-                <NavLink to="/profile">profile</NavLink>
+                <NavLink to="/profile">Profile</NavLink>
               </li>
+              {
+                user ? null : <li className="block text-gray-900 dark:text-white hover:text-blue-700">
+                <NavLink to="/register">Register</NavLink>
+              </li>
+              }
             </ul>
           </div>
         ) : null}
