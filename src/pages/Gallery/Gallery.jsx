@@ -3,11 +3,11 @@ import { FaAngleLeft, FaAngleRight  } from "react-icons/fa";
 
 const Gallery = () => {
   const imageUrls = [
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
+    "https://i.ibb.co/cksbmJH/image.png",
+    "https://i.ibb.co/VTswGmg/img-06.jpg",
+    "https://i.ibb.co/MC3ryyB/image.png",
+    "https://i.ibb.co/MC3ryyB/image.png",
+    "https://i.ibb.co/0GbYbx2/image.png",
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -28,7 +28,7 @@ const Gallery = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextImage();
-    }, 4000);
+    }, 3000);
 
     return () => {
       clearInterval(interval);
@@ -37,14 +37,14 @@ const Gallery = () => {
 
 
   const mainImageUrl =
-  "https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg";
+  "https://i.ibb.co/ykjgPRd/pexels-william-choquette-1954524.jpg";
 
 const imageUrlPic = [
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
+  "https://i.ibb.co/MC3ryyB/image.png",
+  "https://i.ibb.co/ykjgPRd/pexels-william-choquette-1954524.jpg",
+  "https://i.ibb.co/Yfbk6g2/img-05.png",
+  "https://i.ibb.co/XLnVjW0/img-02.png",
+  "https://i.ibb.co/jZfCm7F/img-04.png",
 ];
 
 const [activeImage, setActiveImage] = useState(mainImageUrl);
@@ -61,7 +61,7 @@ const handleImageClick = (imageUrl) => {
       </p>
       <h1 className="text-center text-5xl font-bold mb-16">Live Events</h1>
       </div>
-      <div>
+      <div className="">
         <div id="gallery" className="relative w-full mt-20 " data-carousel="slide">
           <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
             {imageUrls.map((imageUrl, index) => (
@@ -97,7 +97,13 @@ const handleImageClick = (imageUrl) => {
         </div>
       </div>
 
-      <div className=" mt-20">
+
+
+
+
+
+
+      <div className="mt-20">
       <p className="text-center text-[#524FF5] text-2xl font-semibold uppercase tracking-[8px] mb-1">
       Latest Captured Moments
       </p>
@@ -116,7 +122,7 @@ const handleImageClick = (imageUrl) => {
         {imageUrlPic.map((imageUrl, index) => (
           <div key={index}>
             <img
-              className="h-auto max-w-full rounded-lg cursor-pointer"
+              className="h-auto w-fit rounded-lg cursor-pointer"
               src={imageUrl}
               alt={`Image ${index + 1}`}
               onClick={() => handleImageClick(imageUrl)}
