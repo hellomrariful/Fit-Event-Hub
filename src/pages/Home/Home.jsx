@@ -13,16 +13,16 @@ const Home = () => {
 
   const faqItems = [
     {
-      question: "What is Material Tailwind?",
-      answer: "Material Tailwind is a...",
+      question: "What is the main purpose of the fitness event hub project?",
+      answer: "The main purpose of the fitness event hub project is to create a platform where fitness enthusiasts can access information about ongoing fitness events. It provides a user-friendly interface to showcase fitness events, including details like dates, locations, and event descriptions. Users can stay updated on upcoming fitness activities and register for events of interest.",
     },
     {
-      question: "How to use Material Tailwind?",
-      answer: "To use Material Tailwind...",
+      question: "How can I log in or register on this site?",
+      answer: "It's easy! If you're new here, simply click 'Register.' You'll be taken to the registration page where you can create an account using your Google account. Once you've registered, click 'Log In' to access the login page. Just like with registration, you can log in using your Google account.",
     },
     {
-      question: "What can I do with Material Tailwind?",
-      answer: "With Material Tailwind, you can...",
+      question: "How do I book an event on the Fitness Event Hub platform?",
+      answer: "It's simple and easy. Here is the step:\n\n1. Browse Events: Explore our wide range of fitness events, using filters and categories to find the right one.\n2. Event Details: Click on an event. \n3. Registration: If you have an account, log in; otherwise, create one quickly.\n4. Select Tickets: Choose the number and type of tickets you need.\n5. Payment: Proceed to the secure payment page and enter your payment details. \n6. Confirmation: After a successful payment, you'll receive a booking confirmation via email or message. ",
     },
   ];
 
@@ -86,7 +86,7 @@ const Home = () => {
 
             <div className="p-6 text-white">
             <div className="flex justify-between items-center">
-              <h4 className="mb-2 text-2xl font-semibold">Steve Smith</h4>
+              <h4 className="mb-2 text-2xl font-semibold">Madison Froning</h4>
               <span className="flex items-center text-xl  text-[#FFA722]"> 
              
               <FaStar></FaStar>
@@ -98,7 +98,7 @@ const Home = () => {
                 Specializations :
               </p>
               <p className=" text-xl font-normal text-[#858585]">
-                Crosscut Export, Nutrition & Rehab
+                Fitness Fashion Export, Fiesta & Rehab
               </p>
               <div className="flex justify-center text-xl gap-4 mt-4">
                 <FaInstagram></FaInstagram>
@@ -114,7 +114,7 @@ const Home = () => {
 
             <div className="p-6 text-white">
             <div className="flex justify-between items-center">
-              <h4 className="mb-2 text-2xl font-semibold">Steve Smith</h4>
+              <h4 className="mb-2 text-2xl font-semibold">Jhon Willson</h4>
               <span className="flex items-center text-xl  text-[#FFA722]"> 
              
               <FaStar></FaStar>
@@ -126,7 +126,7 @@ const Home = () => {
                 Specializations :
               </p>
               <p className=" text-xl font-normal text-[#858585]">
-                Crosscut Export, Nutrition & Rehab
+                Meditation Export, Mental & Yoga
               </p>
               <div className="flex justify-center text-xl gap-4 mt-4">
                 <FaInstagram></FaInstagram>
