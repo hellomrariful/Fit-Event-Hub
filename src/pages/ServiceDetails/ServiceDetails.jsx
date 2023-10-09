@@ -3,7 +3,6 @@ import moment from "moment";
 
 const ServiceDetails = () => {
   const services = useLoaderData();
-
   const { id } = useParams();
 
   console.log(typeof id);

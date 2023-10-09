@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import banner from '../../../assets/banner.jpeg';
 
+
 const Header = () => {
   const backgroundImageStyle = {
     backgroundImage: `url(${banner})`,
@@ -25,9 +26,11 @@ const Header = () => {
             </Link>
             </span>
             <span>
+            <Link to='/about'>
             <button className="md:px-8 px-4 py-4 mt-4 text-xl font-medium text-white capitalize transition-colors duration-300 transform outline lg:w-auto hover:bg-[#F0F0F0] focus:outline-none focus:bg-blue-500 ">
             About Us
             </button>
+            </Link>
             </span>
             </div>
           </div>
