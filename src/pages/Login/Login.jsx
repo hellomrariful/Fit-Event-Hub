@@ -46,7 +46,7 @@ const Login = () => {
 
         setTimeout(() => {
           navigate(location?.state ? location.state : "/");
-        }, 2000)
+        }, 1000)
         
     
         
@@ -82,7 +82,7 @@ const Login = () => {
         // Delay the navigation for 2 seconds (2000 milliseconds) to display the success message.
         setTimeout(() => {
           navigate(location?.state ? location.state : "/");
-        }, 2000)
+        }, 1000)
       })
       .catch((error) => {
         console.error(error.message);
@@ -189,7 +189,7 @@ const Login = () => {
             </form>
             <button
               onClick={handelGoogleLogIn}
-              className="flex items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+              className="flex items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg hover:bg-gray-50 "
             >
               <div className="py-2">
                 <svg className="w-6 h-6" viewBox="0 0 40 40">

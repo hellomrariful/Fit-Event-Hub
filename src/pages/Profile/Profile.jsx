@@ -18,7 +18,7 @@ const Profile = ({ children }) => {
         <h1 className=" text-center text-2xl font-semibold  pt-5">
           My Profile
         </h1>
-        <div className=" grid grid-cols-3">
+        <div className="grid grid-cols-3">
           <div className=" col-span-1">
             <img
               className=" h-28 w-28 rounded-full ml-5 md:ml-14 "

@@ -26,9 +26,9 @@ const Header = () => {
             </Link>
             </span>
             <span>
-            <Link to='/about'>
-            <button className="md:px-8 px-4 py-4 mt-4 text-xl font-medium text-white capitalize transition-colors duration-300 transform outline lg:w-auto hover:bg-[#F0F0F0] focus:outline-none focus:bg-blue-500 ">
-            About Us
+            <Link to='/gallery'>
+            <button className="md:px-8 px-4 py-4 mt-4 text-xl font-medium text-white capitalize transition-colors duration-300 transform outline lg:w-auto hover:bg-[#F0F0F0] focus:outline-none focus:bg-blue-500">
+            Gallery
             </button>
             </Link>
             </span>

@@ -35,7 +35,6 @@ const Gallery = () => {
     };
   }, [activeIndex]);
 
-
   const mainImageUrl =
   "https://i.ibb.co/ykjgPRd/pexels-william-choquette-1954524.jpg";
 
