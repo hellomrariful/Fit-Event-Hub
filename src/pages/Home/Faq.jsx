@@ -31,7 +31,7 @@ const Faq = ({ faqItems }) => {
               activeItem === index ? "h-auto" : "h-0"
             } overflow-hidden transition-all duration-300 ease-in-out`}
           >
-            <div className="p-4 text-sm leading-normal text-blue-gray-500/80">
+            <div className="p-4 text-xl text-[#858585]">
               {faqItem.answer}
             </div>
           </div>

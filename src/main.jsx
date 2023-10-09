@@ -10,6 +10,8 @@ import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
 import Error from "./pages/Error/Error";
 import AuthProvider from "./Providers/AuthProvider";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import About from "./pages/About/About";
+import Profile from "./pages/Profile/Profile";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
+      },
+      {
+        path: "/profile",
+        element: <Profile></Profile>,
       },
     ],
   },

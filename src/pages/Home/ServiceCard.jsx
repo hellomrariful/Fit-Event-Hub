@@ -1,37 +1,46 @@
 import { Link } from "react-router-dom";
+import { FaDollarSign } from "react-icons/fa";
 
 const ServiceCard = ({ service }) => {
-    const {id, name, image, price, description } = service;
-    return (
-      <div className="mb-8"> {/* Added lg:w-1/2 to make it half-width on lg screens */}
-        <Link to={`/service/${id}`}>
-        <div className="bg-white shadow-md dark:bg-gray-800">
-          <img className="object-cover w-full md:h-96 lg:h-3/5" src={image} alt="" />
-          <div className="p-6">
+  const { id, name, image, price, description } = service || "";
+  return (
+    <div className="mb-8">
+      <Link to={`/service/${id}`}>
+        <div className="bg-white shadow-md dark:bg-gray-800 lg:h-full my-6">
+          <img
+            className="object-cover w-full md:h-96 lg:h-3/5"
+            src={image}
+            alt=""
+          />
+          <div className="px-7 py-4 -mb-12">
             <div>
-              <a
-                href="#"
-                className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline"
-                role="link"
-              >
-                {name}
-              </a>
-              <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                {
-                  description.length > 200? <p>{description.slice(0, 200)}<Link to={`/service/${id}`}> Read More</Link></p> 
-                  
-                  :
+              <div className="flex justify-between text-[27px] font-bold ">
+                <h1 className="">{name}</h1>
+                <h1 className="flex items-center text-[#524FF5]">
+                  <span>
+                    <FaDollarSign></FaDollarSign>
+                  </span>
+                  <span>{price}</span>
+                </h1>
+              </div>
+              <div className="mt-3 text-[16px] text-[#6A6A6A]">
+                <div className="lg:-mb-10 xl:-mb-20">
+                  {description.length > 130 ? (
+                  <p>
+                    {description.slice(0, 130)}
+                    <Link className="text-[#524FF5] text-[16px]" to={`/service/${id}`}>... Read More</Link>
+                  </p>
+                ) : (
                   <p>{description}</p>
-                }
-                
+                )}
+                </div>
               </div>
             </div>
           </div>
         </div>
-        </Link>
-      </div>
-    );
-  };
-  
-  export default ServiceCard;
-  
+      </Link>
+    </div>
+  );
+};
+
+export default ServiceCard;
