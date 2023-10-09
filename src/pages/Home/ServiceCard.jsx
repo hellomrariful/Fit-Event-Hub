@@ -6,7 +6,10 @@ const ServiceCard = ({ service }) => {
   return (
     <div className="mb-8">
       <Link to={`/service/${id}`}>
-        <div className="bg-white shadow-md lg:h-full my-6">
+        <div className="bg-white shadow-md lg:h-full my-6" data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+        data-aos-offset="100">
           <img
             className="object-cover w-full md:h-96 lg:h-3/5"
             src={image}

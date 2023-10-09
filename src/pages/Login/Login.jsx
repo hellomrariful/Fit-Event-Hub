@@ -26,7 +26,7 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         console.log(result.user);
-        e.target.reset()
+        e.target.reset();
         const displayErrorToast = () => {
           toast.dismiss("error-toast");
           toast.success("Logged Successfully", {
@@ -46,10 +46,7 @@ const Login = () => {
 
         setTimeout(() => {
           navigate(location?.state ? location.state : "/");
-        }, 1000)
-        
-    
-        
+        }, 1000);
       })
       .catch((err) => {
         console.error(err);
@@ -78,21 +75,21 @@ const Login = () => {
           });
         };
         displayErrorToast();
-        
+
         // Delay the navigation for 2 seconds (2000 milliseconds) to display the success message.
         setTimeout(() => {
           navigate(location?.state ? location.state : "/");
-        }, 1000)
+        }, 1000);
       })
       .catch((error) => {
         console.error(error.message);
       });
-  }
-  
+  };
+
   return (
     <div>
       <div className="flex w-60 items-center text-center mx-auto px-6">
-        <img src={fitness} alt=""/>
+        <img src={fitness} alt="" />
       </div>
       <div className="flex justify-center">
         <div className=" px-8 py-12 bg-[#F7FAFC] rounded-2xl drop-shadow-2xl">
@@ -100,12 +97,12 @@ const Login = () => {
             <h4 className="block text-center text-[22px]">
               Log in to Fitness Hub
             </h4>
-            <div >
-            {loggedError && (
-              <p className="border-2 p-3 mt-6 border-[#de4523] bg-[#ffebe8] text-black rounded">
-                {loggedError}
-              </p>
-            )}
+            <div>
+              {loggedError && (
+                <p className="border-2 p-3 mt-6 border-[#de4523] bg-[#ffebe8]  text-black rounded">
+                  {loggedError}
+                </p>
+              )}
             </div>
 
             <form
@@ -164,7 +161,7 @@ const Login = () => {
               </div>
               <button
                 className="mt-6 block w-full select-none rounded-lg
-             bg-[#524FF5] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-[#6b6f68] transition-all hover:shadow-md
+             bg-[#524FF5] py-3 px-6 text-center align-middle font-sans font-bold uppercase text-white shadow-md shadow-[#6b6f68] transition-all hover:shadow-md
               hover:shadow-[#A1F65E] focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 type="submit"
                 data-ripple-light="true"
@@ -182,10 +179,10 @@ const Login = () => {
                 </Link>
               </p>
               <p className=" flex items-center mt-5">
-            <p className="border-t-2 w-1/2"></p>
-            <p className="px-2">Or</p>
-            <p className="border-t-2 w-1/2"></p>
-          </p>
+                <p className="border-t-2 w-1/2"></p>
+                <p className="px-2">Or</p>
+                <p className="border-t-2 w-1/2"></p>
+              </p>
             </form>
             <button
               onClick={handelGoogleLogIn}

@@ -45,7 +45,7 @@ const Register = () => {
         e.target.reset()
         const displayErrorToast = () => {
           toast.dismiss("error-toast");
-          toast.success("User Create Successfully", {
+          toast.success("User Created Successfully", {
             id: "error-toast",
             duration: 2000,
             style: {
@@ -85,7 +85,7 @@ const Register = () => {
         console.log(result);
         const displayErrorToast = () => {
           toast.dismiss("error-toast");
-          toast.success("Logged Successfully", {
+          toast.success("Sign Up Successfully", {
             id: "error-toast",
             duration: 2000,
             style: {
@@ -120,7 +120,7 @@ const Register = () => {
           <h4 className="block text-center text-[22px]">
             Create a new account
           </h4>
-          {registerError && <p className="border-2 p-3 mt-6 border-[#de4523] bg-[#ffebe8] text-black rounded">{registerError}</p>}
+          {registerError && <p className="border-2 p-3 mt-6 border-[#de4523] bg-[#ffebe8] text-center text-black rounded">{registerError}</p>}
           <form
             onSubmit={handelRegister}
             className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
@@ -233,8 +233,8 @@ const Register = () => {
               </label>
             </div>
             <button
-              className="mt-6 block w-full select-none rounded-lg
-             bg-[#524FF5] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-[#6b6f68] transition-all hover:shadow-md
+              className="mt-6 block w-full select-none rounded-lg 
+             bg-[#524FF5] py-3 px-6 text-center align-middle font-sans font-bold uppercase text-white shadow-md shadow-[#6b6f68] transition-all hover:shadow-md
               hover:shadow-[#A1F65E] focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="submit"
               data-ripple-light="true"

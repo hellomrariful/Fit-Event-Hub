@@ -47,20 +47,26 @@ const Home = () => {
             Ongoing Events
           </h1>
         </div>
-        <div className="grid lg:grid-cols-2 lg:space-x-4 ">
+        <div className="grid lg:grid-cols-2 lg:space-x-4">
           {services.map((service) => (
             <ServiceCard key={service.id} service={service}></ServiceCard>
           ))}
         </div>
       </div>
 
-      <div>
+      <div data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+        data-aos-offset="100"> 
         <p className="text-center text-[#524FF5] text-2xl font-semibold uppercase tracking-[8px] mb-1 mt-20">
           We Trained You to Gain
         </p>
         <h1 className="text-center text-5xl font-bold mb-16">Our Trainers</h1>
 
-        <div>
+        <div data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+        data-aos-offset="100">
           <div className="grid md:grid-cols-3 space-x-4 ">
             <div className="bg-[#1B2129]">
               <div className="bg-[#D3D3D3] -mt-3">
@@ -154,7 +160,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div>
+      <div data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+        data-aos-offset="100">
         <p className="text-center text-[#524FF5] text-2xl font-semibold uppercase tracking-[8px] mb-1 mt-20">
           Frequently Asked Questions
         </p>
