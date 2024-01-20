@@ -9,7 +9,7 @@ Fitness Hub is a gym and fitness Events managed projects, where people can book 
 
 ## Fitness Hub Homepage
 
-![Home Page of Fitness Hub](/public/3-devices-white.png)
+![Home Page of Fitness Hub](/src/assets/all-devices-white.png)
 
 ## Key Features
 
