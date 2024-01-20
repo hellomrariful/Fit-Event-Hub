@@ -1,7 +1,7 @@
 ## [Fitness Hub | Health and Wellness Events Center](https://fit-event-hub.web.app/)
 
 ## Description
-Fitness Hub is a gym and fitness Events managed projects, where people can book different type of event.
+Fitness Hub is a gym and fitness Events management projects, where people can book various Health and Wellness Events in just one click.
 
 ## Live Link
 
